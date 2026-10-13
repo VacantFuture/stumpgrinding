@@ -95,22 +95,87 @@ const phoneNumber = '(555) 123-4567';
   const mobileMenu = document.getElementById('mobile-menu');
   const iconOpen = document.getElementById('menu-icon-open');
   const iconClose = document.getElementById('menu-icon-close');
+  const mobileMenuLinks = mobileMenu?.querySelectorAll('a');
+
+  let lastFocusedElement = null;
+
+  // Get all focusable elements in mobile menu
+  const getFocusableElements = () => {
+    return mobileMenu?.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])') || [];
+  };
+
+  const trapFocus = (e) => {
+    const focusableElements = getFocusableElements();
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        // Shift + Tab
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        }
+      } else {
+        // Tab
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          menuButton.focus();
+        }
+      }
+    }
+
+    // Close menu on Escape
+    if (e.key === 'Escape') {
+      closeMenu();
+    }
+  };
+
+  const openMenu = () => {
+    lastFocusedElement = document.activeElement;
+    mobileMenu?.classList.remove('hidden');
+    menuButton?.setAttribute('aria-expanded', 'true');
+    iconOpen?.classList.add('hidden');
+    iconClose?.classList.remove('hidden');
+
+    // Add focus trap listener
+    mobileMenu?.addEventListener('keydown', trapFocus);
+
+    // Focus first link in menu
+    const focusableElements = getFocusableElements();
+    if (focusableElements.length > 0) {
+      setTimeout(() => focusableElements[0].focus(), 100);
+    }
+  };
+
+  const closeMenu = () => {
+    mobileMenu?.classList.add('hidden');
+    menuButton?.setAttribute('aria-expanded', 'false');
+    iconOpen?.classList.remove('hidden');
+    iconClose?.classList.add('hidden');
+
+    // Remove focus trap listener
+    mobileMenu?.removeEventListener('keydown', trapFocus);
+
+    // Return focus to menu button
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+    }
+  };
 
   menuButton?.addEventListener('click', () => {
     const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-    menuButton.setAttribute('aria-expanded', String(!isExpanded));
-    mobileMenu?.classList.toggle('hidden');
-    iconOpen?.classList.toggle('hidden');
-    iconClose?.classList.toggle('hidden');
+    if (isExpanded) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
   // Close mobile menu when a link is clicked
-  mobileMenu?.querySelectorAll('a').forEach((link) => {
+  mobileMenuLinks?.forEach((link) => {
     link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      menuButton?.setAttribute('aria-expanded', 'false');
-      iconOpen?.classList.remove('hidden');
-      iconClose?.classList.add('hidden');
+      closeMenu();
     });
   });
 </script>
