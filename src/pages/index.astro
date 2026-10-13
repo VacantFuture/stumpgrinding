@@ -9,10 +9,12 @@ import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout>
-  <NavBar />
-  <Hero />
-  <Services />
-  <Testimonials />
-  <Contact />
+  <header><NavBar /></header>
+  <main id="main-content">
+    <Hero />
+    <Services />
+    <Testimonials />
+    <Contact />
+  </main>
   <Footer />
 </BaseLayout>
