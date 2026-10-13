@@ -13,8 +13,11 @@
   },
   "dependencies": {
     "@astrojs/svelte": "^9.0.1",
+    "@iconify-json/material-symbols": "^1.2.95",
+    "@iconify-json/mdi": "^1.2.3",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.2.10",
+    "astro-iconset": "^0.0.6",
     "svelte": "^5.57.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3"

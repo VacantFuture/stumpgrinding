@@ -1,0 +1,47 @@
+---
+import heroImage from '../images/callum-hill-NGGkGzslIaM-unsplash.jpg';
+---
+
+<section
+  class="relative flex min-h-screen items-center justify-center overflow-hidden"
+  aria-label="Hero"
+>
+  {/* Background image */}
+  <div
+    class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${heroImage.src})` }}
+    aria-hidden="true"
+  />
+
+  {/* Dark gradient overlay */}
+  <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+
+  {/* Content */}
+  <div class="relative z-10 mx-auto max-w-4xl px-4 py-32 text-center sm:px-6">
+    <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
+      Quality Craftsmanship,
+      <span class="block text-[var(--color-amber)]">Built to Last</span>
+    </h1>
+    <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-200 sm:text-xl">
+      Professional contractor services for your home and business.
+      Trusted by hundreds of satisfied clients across the region.
+    </p>
+    <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <a
+        href="#services"
+        class="inline-flex items-center gap-2 rounded-lg bg-[var(--color-amber)] px-8 py-3.5 text-base font-semibold text-[var(--color-navy-dark)] shadow-lg transition-all hover:bg-[var(--color-amber-light)] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[var(--color-amber)] focus:ring-offset-2 focus:ring-offset-black"
+      >
+        Learn More
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
+      <a
+        href="#contact"
+        class="inline-flex items-center gap-2 rounded-lg border-2 border-white/30 bg-white/10 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-all hover:border-white/60 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-[var(--color-amber)] focus:ring-offset-2 focus:ring-offset-black"
+      >
+        Get a Free Quote
+      </a>
+    </div>
+  </div>
+</section>
