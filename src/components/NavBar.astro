@@ -12,24 +12,24 @@ const phoneNumber = '(555) 123-4567';
 ---
 
 <nav
-  class="fixed top-0 left-0 right-0 z-50 w-full bg-[var(--color-navy)] shadow-lg"
+  class="fixed top-0 left-0 right-0 z-50 w-full bg-[var(--color-accent-500)] text-white shadow-lg"
   aria-label="Main navigation"
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       {/* Logo */}
       <a href="#" aria-label="Home" class="flex items-center gap-2">
-        <Icon name="material-symbols:construction" class="h-8 w-8 text-[var(--color-amber)]" />
-        <span class="text-wordmark font-wordmark font-bold text-white">CASUAL PAINTING AND CARPENTRY</span>
+        <Icon name="material-symbols:construction" class="h-8 w-8 text-[var(--color-accent-secondary-500)]" />
+        <span class="font-wordmark font-bold tracking-tight text-white text-sm sm:text-base md:text-lg lg:text-xl overflow-hidden text-ellipsis whitespace-nowrap">CASUAL PAINTING AND CARPENTRY</span>
       </a>
 
       {/* Phone number (center, hidden on small screens) */}
       <a
         href={`tel:${phoneNumber.replace(/[() -]/g, '')}`}
-        class="hidden items-center gap-1.5 text-[var(--color-amber)] transition-colors hover:text-[var(--color-amber-light)] sm:flex"
+        class="hidden items-center gap-1.5 font-semibold text-white transition-colors hover:text-[var(--color-accent-secondary-400)] sm:flex"
       >
-        <Icon name="material-symbols:call" class="h-4 w-4" />
-        <span class="font-semibold">{phoneNumber}</span>
+        <Icon name="material-symbols:call" class="h-4 w-4 text-[var(--color-accent-secondary-500)]" />
+        <span>{phoneNumber}</span>
       </a>
 
       {/* Desktop nav links */}
@@ -37,14 +37,14 @@ const phoneNumber = '(555) 123-4567';
         {navLinks.map((link) => (
           <a
             href={link.href}
-            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-[var(--color-navy-light)] hover:text-white"
+            class="rounded-md px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-[var(--color-accent-600)] hover:text-white"
           >
             {link.label}
           </a>
         ))}
         <a
           href={`tel:${phoneNumber.replace(/[() -]/g, '')}`}
-          class="ml-2 inline-flex items-center gap-1.5 rounded-md bg-[var(--color-amber)] px-4 py-2 text-sm font-semibold text-[var(--color-navy-dark)] transition-colors hover:bg-[var(--color-amber-light)]"
+          class="ml-2 inline-flex items-center gap-1.5 rounded-md bg-[var(--color-accent-secondary-500)] px-4 py-2 text-sm font-semibold text-[var(--color-neutral-50)] transition-colors hover:bg-[var(--color-accent-secondary-400)]"
         >
           <Icon name="material-symbols:call" class="h-4 w-4" />
           Call Now
@@ -55,7 +55,7 @@ const phoneNumber = '(555) 123-4567';
       <button
         type="button"
         id="mobile-menu-button"
-        class="inline-flex items-center justify-center rounded-md p-2 text-gray-300 transition-colors hover:bg-[var(--color-navy-light)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[var(--color-amber)] md:hidden"
+        class="inline-flex items-center justify-center rounded-md p-2 text-white transition-colors hover:bg-[var(--color-accent-600)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-secondary-500)] md:hidden"
         aria-expanded="false"
         aria-label="Toggle mobile menu"
       >
@@ -73,14 +73,14 @@ const phoneNumber = '(555) 123-4567';
         {navLinks.map((link) => (
           <a
             href={link.href}
-            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-[var(--color-navy-light)] hover:text-white"
+            class="rounded-md px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-[var(--color-accent-600)] hover:text-white"
           >
             {link.label}
           </a>
         ))}
         <a
           href={`tel:${phoneNumber.replace(/[() -]/g, '')}`}
-          class="mt-2 inline-flex items-center justify-center gap-1.5 rounded-md bg-[var(--color-amber)] px-4 py-2 text-sm font-semibold text-[var(--color-navy-dark)] transition-colors hover:bg-[var(--color-amber-light)]"
+          class="mt-2 inline-flex items-center justify-center gap-1.5 rounded-md bg-[var(--color-accent-secondary-500)] px-4 py-2 text-sm font-semibold text-[var(--color-neutral-50)] transition-colors hover:bg-[var(--color-accent-secondary-400)]"
         >
           <Icon name="material-symbols:call" class="h-4 w-4" />
           Call {phoneNumber}

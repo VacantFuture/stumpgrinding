@@ -70,7 +70,7 @@ const schemaData = {
 };
 ---
 
-<footer id="footer" class="bg-[var(--color-navy)]">
+<footer id="footer" class="bg-[var(--color-accent-500)] text-white">
   <script
     type="application/ld+json"
     set:html={JSON.stringify(schemaData)}
@@ -89,17 +89,6 @@ const schemaData = {
           {address}<br />
           {city}
         </address>
-        <a
-          href={`https://www.google.com/maps/search/?query=${googleMapsAddress}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mt-3 inline-flex items-center gap-1.5 text-sm text-gray-300 transition-colors hover:text-[var(--color-amber)]"
-          aria-label="View our location on Google Maps (opens in new tab)"
-        >
-          <Icon name="material-symbols:location-on" class="h-4 w-4" />
-          <span class="sr-only">(opens in new tab)</span>
-          View on Maps
-        </a>
       </div>
 
       {/* 2. Contact Information */}
@@ -109,7 +98,7 @@ const schemaData = {
         </h3>
         <a
           href={`tel:${phone.replace(/[() -]/g, '')}`}
-          class="mb-4 inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-[var(--color-amber)]"
+          class="mb-4 inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-[var(--color-accent-secondary-500)]"
         >
           <Icon name="material-symbols:call" class="h-4 w-4" />
           {phone}
@@ -140,34 +129,13 @@ const schemaData = {
             <li>
               <a
                 href={link.href}
-                class="text-sm text-gray-300 transition-colors hover:text-[var(--color-amber)]"
+                class="text-sm text-white transition-colors hover:text-[var(--color-accent-secondary-500)]"
               >
                 {link.label}
               </a>
             </li>
           ))}
         </ul>
-      </div>
-
-      {/* 4. Service Area */}
-      <div>
-        <h3 class="mb-2 text-lg font-bold tracking-tight text-white">
-          Service Area
-        </h3>
-        <p class="text-sm text-gray-300">
-          Serving Canton, Potsdam &amp; Massena
-        </p>
-        <a
-          href={`https://www.google.com/maps/search/?query=${googleMapsArea}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mt-3 inline-flex items-center gap-1.5 text-sm text-gray-300 transition-colors hover:text-[var(--color-amber)]"
-          aria-label="View our service area on Google Maps (opens in new tab)"
-        >
-          <Icon name="material-symbols:location-on" class="h-4 w-4" />
-          <span class="sr-only">(opens in new tab)</span>
-          View Service Area
-        </a>
       </div>
     </div>
 
@@ -188,7 +156,7 @@ const schemaData = {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Follow us on ${s.label} (opens in new tab)`}
-              class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-600 bg-gray-700/50 text-[var(--color-amber)] transition-all hover:border-[var(--color-amber)] hover:bg-gray-700 hover:text-[var(--color-amber-light)] hover:shadow-md"
+              class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-600 bg-gray-700/50 text-[var(--color-accent-secondary-500)] transition-all hover:border-[var(--color-accent-secondary-500)] hover:bg-gray-700 hover:text-[var(--color-accent-secondary-400)] hover:shadow-md"
             >
               <Icon name={s.icon} class="h-5 w-5" />
             </a>
@@ -197,14 +165,14 @@ const schemaData = {
         <div class="flex gap-3 text-sm text-gray-400">
           <a
             href="#"
-            class="transition-colors hover:text-[var(--color-amber)]"
+            class="transition-colors hover:text-[var(--color-accent-secondary-500)]"
           >
             Privacy
           </a>
           <span aria-hidden="true">|</span>
           <a
             href="#"
-            class="transition-colors hover:text-[var(--color-amber)]"
+            class="transition-colors hover:text-[var(--color-accent-secondary-500)]"
           >
             Terms
           </a>
