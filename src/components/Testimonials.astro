@@ -30,7 +30,7 @@ const testimonials = [
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     {/* Section header */}
     <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-3xl font-extrabold tracking-tight text-[var(--color-navy)] sm:text-4xl">
+      <h2 class="text-3xl font-extrabold tracking-tight text-[#2B4C5E] sm:text-4xl">
         What Our Clients Say
       </h2>
       <p class="mt-4 text-lg text-gray-600">
@@ -45,7 +45,7 @@ const testimonials = [
           {/* Quote marks */}
           <Icon
             name="material-symbols:format-quote"
-            class="mb-4 h-8 w-8 text-[var(--color-amber)]/40"
+            class="mb-4 h-8 w-8 text-[#E2583E]/40"
           />
           <blockquote class="flex-1 text-sm leading-relaxed text-gray-600">
             "{t.quote}"
@@ -53,12 +53,12 @@ const testimonials = [
           {/* Author */}
           <div class="mt-6 flex items-center gap-3 border-t border-gray-100 pt-4">
             <div class="flex-shrink-0">
-              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-navy)] text-sm font-semibold text-[var(--color-amber)]">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#2B4C5E] text-sm font-semibold text-[#E2583E]">
                 {t.name.charAt(0)}
               </div>
             </div>
             <div>
-              <p class="text-sm font-semibold text-[var(--color-navy)]">
+              <p class="text-sm font-semibold text-[var(--color-accent-500)]">
                 {t.name}
               </p>
               <p class="text-xs text-gray-500">{t.project}</p>
@@ -67,7 +67,7 @@ const testimonials = [
               {Array.from({ length: t.stars }, (_, i) => (
                 <Icon
                   name="material-symbols:star"
-                  class="h-4 w-4 text-[var(--color-amber)]"
+                  class="h-4 w-4 text-[var(--color-accent-secondary-500)]"
                 />
               ))}
             </div>
