@@ -1,14 +1,15 @@
 ---
 import { Icon } from 'astro-iconset/components';
 
-const companyName = 'CASUAL PAINTING AND CARPENTRY';
-const tagline = 'Quality Craftsmanship, Built to Last';
-const address = '1234 Builder Rd';
-const city = 'Potsdam, NY 13676';
-const googleMapsAddress = encodeURIComponent(`${address}, ${city}`);
-const googleMapsArea = encodeURIComponent('Canton, Potsdam & Massena, NY');
+const companyName = 'TF Stump Grinding';
+const tagline = 'Professional Stump Grinding & Tree Services';
+const address = 'Potsdam, NY';
+const city = 'Serving St. Lawrence County';
+// const googleMapsAddress = encodeURIComponent(`${address}, ${city}`);
+// const googleMapsArea = encodeURIComponent('Your Service Area');
 
-const phone = '(315) 555-1212';
+const phone = '(315) 212-6847';
+const currentYear = new Date().getFullYear();
 const hours = [
   { day: 'Mon-Fri', time: '8AM - 6PM' },
   { day: 'Saturday', time: '9AM - 2PM' },
@@ -16,9 +17,9 @@ const hours = [
 ];
 
 const quickLinks = [
+  { label: 'Pricing', href: '#pricing' },
   { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Reviews', href: '#testimonials' },
   { label: 'Contact', href: '#contact' },
   { label: 'Privacy Policy', href: '#' },
   { label: 'Terms of Service', href: '#' },
@@ -45,28 +46,57 @@ const socials = [
 const schemaData = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: companyName,
-  tagline: tagline,
+  name: 'TF Stump Grinding',
+  alternateName: 'TF Stump Grinding Service',
+  description: 'Professional stump grinding for residential and business customers in Northern New York. Fully insured with free quotes.',
+  telephone: '+13152126847',
+  url: 'https://tfstumpgrinding.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: address,
     addressLocality: 'Potsdam',
     addressRegion: 'NY',
-    postalCode: '13676',
     addressCountry: 'US',
   },
-  telephone: phone.replace(/[() -]/g, ''),
-  openingHoursSpecification: hours.map((h) => ({
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek:
-      h.day === 'Mon-Fri'
-        ? ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
-        : h.day === 'Saturday'
-          ? 'Saturday'
-          : 'Sunday',
-    opens: h.time === 'Closed' ? null : h.time.split(' - ')[0],
-    closes: h.time === 'Closed' ? null : h.time.split(' - ')[1],
-  })),
+  areaServed: {
+    '@type': 'County',
+    name: 'St. Lawrence County',
+  },
+  serviceType: 'Stump Grinding',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Stump Grinding Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Stump Grinding',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Tree Removal',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Full Service Clean Up',
+        },
+      },
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '3',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  priceRange: '$$',
 };
 ---
 
@@ -87,7 +117,7 @@ const schemaData = {
         <p class="mt-2 text-sm text-gray-300">{tagline}</p>
         <address class="mt-4 not-italic text-sm text-gray-300">
           {address}<br />
-          {city}
+          <span class="text-gray-400">{city}</span>
         </address>
       </div>
 
@@ -145,7 +175,7 @@ const schemaData = {
     {/* Bottom bar */}
     <div class="mt-6 flex flex-col items-center justify-between gap-4 sm:flex-row">
       <p class="text-sm text-gray-400">
-        &copy; 2026 {companyName}. All rights reserved.
+        &copy; {currentYear} {companyName}. All rights reserved.
       </p>
       <div class="flex items-center gap-4">
         {/* Social icons */}

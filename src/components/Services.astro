@@ -1,78 +1,58 @@
 ---
 import { Icon } from 'astro-iconset/components';
-
-const services = [
-  {
-    title: 'Home Renovation',
-    description:
-      'Transform your living spaces with our comprehensive home renovation services. From kitchen remodels to full home makeovers.',
-  },
-  {
-    title: 'Commercial Buildouts',
-    description:
-      'Professional commercial space design and construction. We build offices, retail spaces, and restaurants that impress.',
-  },
-  {
-    title: 'Roofing & Siding',
-    description:
-      'Protect your property with expert roofing and siding solutions. Quality materials and craftsmanship for lasting durability.',
-  },
-  {
-    title: 'Electrical & Plumbing',
-    description:
-      'Licensed electrical and plumbing services for new construction, repairs, and upgrades. Safe and code-compliant work.',
-  },
-  {
-    title: 'Custom Carpentry',
-    description:
-      'Beautiful custom woodwork crafted to your specifications. Cabinetry, trim, decks, and everything in between.',
-  },
-  {
-    title: 'Project Management',
-    description:
-      'End-to-end project oversight ensuring your build stays on time and on budget. Clear communication from start to finish.',
-  },
-];
-
-const iconMap = [
-  'home-improvement-and-tools',
-  'apartment',
-  'roofing',
-  'electrical-services',
-  'carpenter',
-  'assignment',
-];
 ---
 
-<section id="services" class="py-20 sm:py-28">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    {/* Section header */}
-    <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-3xl font-extrabold tracking-tight text-[#2B4C5E] sm:text-4xl">
-        Our Services
+<section id="pricing" class="py-20 sm:py-28">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold tracking-tight text-[var(--color-accent-500)] sm:text-4xl">
+        Pricing and Services.
       </h2>
-      <p class="mt-4 text-lg text-gray-600">
-        From concept to completion, we deliver quality craftsmanship across every trade.
-      </p>
+      <h3 class="mt-2 text-2xl font-semibold text-gray-700">
+        Straight Forward, No Hassle Pricing
+      </h3>
     </div>
-
-    {/* Service cards grid */}
-    <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {services.map((service, index) => (
-        <div
-          class="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-[#E2583E] hover:shadow-lg"
-        >
-          <div class="mb-4 inline-flex rounded-lg bg-[#2B4C5E] p-3 text-[#E2583E] transition-colors group-hover:bg-[#E2583E] group-hover:text-[#FAF9F8]">
-            <Icon name={`material-symbols:${iconMap[index]}`} class="h-8 w-8" />
-          </div>
-          <h3 class="mb-2 text-lg font-semibold text-[#2B4C5E]">
-            {service.title}
-          </h3>
-          <p class="text-sm leading-relaxed text-gray-600">
-            {service.description}
-          </p>
-        </div>
-      ))}
+    
+    <div class="mt-10 space-y-6">
+      <p class="mx-auto max-w-3xl text-lg leading-relaxed text-gray-700">
+        There are several factors that determine pricing, which is why we offer free estimates.
+        We get to see all the factors involved while give you an accurate estimate.
+      </p>
+      <p class="mx-auto max-w-3xl text-lg leading-relaxed text-gray-700">
+        Most customers are surprised how affordable stump grinding can be and
+        its always a good idea to check references and get more than one estimate
+      </p>
+      <p class="mx-auto max-w-3xl text-lg leading-relaxed text-gray-700">
+        Price includes standard cleanup, we do not "grind and leave"
+      </p>
+      
+      {/* Full Service Clean Up */}
+      <div class="mt-8 rounded-xl border-2 border-[var(--color-accent-200)] bg-[var(--color-neutral-50)] p-6 sm:p-8">
+        <h4 class="text-xl font-semibold text-[var(--color-accent-500)]">
+          Full Service Clean Up
+        </h4>
+        <p class="mt-3 text-base leading-relaxed text-gray-700">
+          We offer a Full Service Cleanup option in addition to the standard cleanup that
+          comes with every stump grinding job.
+        </p>
+        <p class="mt-3 text-base leading-relaxed text-gray-700">
+          Our Full Service Cleanup includes application of:
+        </p>
+        <ul class="mt-4 space-y-2 text-base text-gray-700">
+          <li class="flex items-center gap-2">
+            <Icon name="material-symbols:check-circle" class="h-5 w-5 text-[var(--color-success-500)]" />
+            Top soil
+          </li>
+          <li class="flex items-center gap-2">
+            <Icon name="material-symbols:check-circle" class="h-5 w-5 text-[var(--color-success-500)]" />
+            Seeds
+          </li>
+          <li class="flex items-center gap-2">
+            <Icon name="material-symbols:check-circle" class="h-5 w-5 text-[var(--color-success-500)]" />
+            Mulch
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
