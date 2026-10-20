@@ -349,3 +349,14 @@ button {
   clip: auto;
   white-space: normal;
 }
+
+/* ═══════════════════════════════════════════════════════
+   Accessibility: Focus Visible — WCAG 2.4.7
+   Visible focus indicator for keyboard navigation
+   ═══════════════════════════════════════════════════════ */
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-secondary-600);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--color-accent-secondary-200);
+}

@@ -25,6 +25,7 @@ const phoneNumber = '(315) 212-6847';
       {/* Phone number (center, hidden on small screens) */}
       <a
         href={`tel:${phoneNumber.replace(/[() -]/g, '')}`}
+        aria-label="Call TF Stump Grinding at ${phoneNumber}"
         class="hidden items-center gap-1.5 font-semibold text-white transition-colors hover:text-[var(--color-accent-secondary-400)] sm:flex"
       >
         <Icon name="material-symbols:call" class="h-4 w-4 text-[var(--color-accent-secondary-500)]" />
@@ -43,7 +44,7 @@ const phoneNumber = '(315) 212-6847';
         ))}
         <a
           href={`tel:${phoneNumber.replace(/[() -]/g, '')}`}
-          class="ml-2 inline-flex items-center gap-1.5 rounded-md bg-[var(--color-accent-secondary-500)] px-4 py-2 text-sm font-semibold text-[var(--color-neutral-50)] transition-colors hover:bg-[var(--color-accent-secondary-400)]"
+          class="ml-2 inline-flex items-center gap-1.5 rounded-md bg-[var(--color-accent-secondary-500)] px-4 py-2 text-sm font-semibold text-[var(--color-neutral-900)] transition-colors hover:bg-[var(--color-accent-secondary-400)]"
         >
           <Icon name="material-symbols:call" class="h-4 w-4" />
           Call Now
@@ -79,7 +80,8 @@ const phoneNumber = '(315) 212-6847';
         ))}
         <a
           href={`tel:${phoneNumber.replace(/[() -]/g, '')}`}
-          class="mt-2 inline-flex items-center justify-center gap-1.5 rounded-md bg-[var(--color-accent-secondary-500)] px-4 py-2 text-sm font-semibold text-[var(--color-neutral-50)] transition-colors hover:bg-[var(--color-accent-secondary-400)]"
+          aria-label="Call TF Stump Grinding at ${phoneNumber}"
+          class="mt-2 inline-flex items-center justify-center gap-1.5 rounded-md bg-[var(--color-accent-secondary-500)] px-4 py-2 text-sm font-semibold text-[var(--color-neutral-900)] transition-colors hover:bg-[var(--color-accent-secondary-400)]"
         >
           <Icon name="material-symbols:call" class="h-4 w-4" />
           Call {phoneNumber}
