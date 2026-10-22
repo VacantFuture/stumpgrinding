@@ -1,0 +1,42 @@
+---
+import { buttonVariants, type ButtonProps } from '../../lib/components/button';
+
+export interface Props extends ButtonProps {
+  href?: string;
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
+  ariaLabel?: string;
+}
+
+const {
+  variant = 'default',
+  size = 'default',
+  class: className = '',
+  href,
+  type = 'button',
+  disabled = false,
+  ariaLabel,
+} = Astro.props;
+
+const classes = buttonVariants({ variant, size, className });
+---
+
+{href ? (
+  <a
+    href={href}
+    class={classes}
+    aria-label={ariaLabel}
+  >
+    <slot />
+  </a>
+) : (
+  <button
+    type={type}
+    class={classes}
+    disabled={disabled}
+    aria-label={ariaLabel}
+  >
+    <slot />
+  </button>
+)}
+---
