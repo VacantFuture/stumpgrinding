@@ -1,47 +1,41 @@
 ---
-import heroImage from '../images/callum-hill-NGGkGzslIaM-unsplash.jpg';
+import { Icon } from 'astro-iconset/components';
+import heroImage from '../images/Tfstump-main-background-v2.jpg';
 ---
 
 <section
-  class="relative flex min-h-screen items-center justify-center overflow-hidden"
+  class="relative flex min-h-screen w-full items-center justify-center"
   aria-label="Hero"
 >
-  {/* Background image */}
+  {/* Background image - full width and height */}
   <div
-    class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    class="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat"
     style={{ backgroundImage: `url(${heroImage.src})` }}
     aria-hidden="true"
   />
 
-  {/* Dark gradient overlay */}
-  <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+  {/* Navy overlay - matching original .bg-navy o-90 */}
+  <div class="absolute inset-0 h-full w-full bg-[var(--color-accent-500)]/50" />
 
-  {/* Content */}
-  <div class="relative z-10 mx-auto max-w-4xl px-4 py-32 text-center sm:px-6">
-    <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
-      Quality Craftsmanship,
-      <span class="block text-[#E2583E]">Built to Last</span>
+  {/* Content - centered vertically and horizontally */}
+  <div class="relative z-10 flex flex-col items-center justify-center px-4 text-center sm:px-6">
+    <h1 class="max-w-full bg-[var(--color-accent-500)]/90 px-4 py-3 font-heading text-3xl font-bold tracking-wide text-white sm:max-w-[80%] sm:text-4xl md:text-5xl lg:text-6xl">
+      Serving the North Country
     </h1>
-    <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-200 sm:text-xl">
-      Professional contractor services for your home and business.
-      Trusted by hundreds of satisfied clients across the region.
-    </p>
-    <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-      <a
-        href="#services"
-        class="inline-flex items-center gap-2 rounded-lg bg-[#E2583E] px-8 py-3.5 text-base font-semibold text-[#FAF9F8] shadow-lg transition-all hover:bg-[#ED8976] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#E2583E] focus:ring-offset-2 focus:ring-offset-black"
+    
+    <h2 class="mt-2 max-w-full bg-[var(--color-accent-500)]/90 py-3 text-2xl font-medium text-white sm:max-w-[80%] sm:text-3xl md:text-4xl">
+      Fully Insured. Free Quotes.
+    </h2>
+    
+    <blockquote class="mt-6">
+      <a 
+        href="tel:315-212-6847" 
+        class="inline-flex items-center rounded-lg bg-[var(--color-accent-secondary-500)] px-6 py-3 text-lg font-medium text-[var(--color-neutral-900)] no-underline transition-colors hover:bg-[var(--color-accent-secondary-400)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-secondary-300)]"
+        aria-label="Call TF Stump Grinding at 315-212-6847"
       >
-        Learn More
-        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
+        <Icon name="material-symbols:call" class="mr-2 h-5 w-5" />
+        Tap to Call: 315-212-6847
       </a>
-      <a
-        href="#contact"
-        class="inline-flex items-center gap-2 rounded-lg bg-[#E2583E] px-8 py-3.5 text-base font-semibold text-white shadow-lg transition-all hover:bg-[#ED8976] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#E2583E] focus:ring-offset-2 focus:ring-offset-black"
-      >
-        Get a Free Quote
-      </a>
-    </div>
+    </blockquote>
   </div>
 </section>

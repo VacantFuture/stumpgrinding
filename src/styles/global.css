@@ -1,45 +1,10 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════════════
-   Font Face Declarations
+   Google Fonts — Work Sans (headings/brand) + Roboto (body)
    ═══════════════════════════════════════════════════════ */
 
-/* Big Shoulders Display — variable font, wordmark only */
-@font-face {
-  font-family: "Big Shoulders Display";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("/src/assets/fonts/Big_Shoulders/BigShoulders-VariableFont_opsz,wght.ttf") format("truetype-variations");
-  fvar-axis {
-    name: opszt; min: 8; max: 144; default: 144;
-    name: wght; min: 100; max: 900; default: 400;
-  }
-}
-
-/* Public Sans — variable font, headings */
-@font-face {
-  font-family: "Public Sans";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("/src/assets/fonts/Public_Sans/PublicSans-VariableFont_wght.ttf") format("truetype-variations");
-  fvar-axis {
-    name: wght; min: 100; max: 900; default: 400;
-  }
-}
-
-/* Public Sans Italic — variable font, emphasis */
-@font-face {
-  font-family: "Public Sans";
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("/src/assets/fonts/Public_Sans/PublicSans-Italic-VariableFont_wght.ttf") format("truetype-variations");
-  fvar-axis {
-    name: wght; min: 100; max: 900; default: 400;
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500&display=swap");
 
 /* ═══════════════════════════════════════════════════════
    Tailwind 4 Theme
@@ -47,9 +12,9 @@
 
 @theme {
   /* ── Font Families ── */
-  --font-wordmark: "Big Shoulders Display", system-ui, sans-serif;
-  --font-heading: "Public Sans", system-ui, sans-serif;
-  --font-body: "Public Sans", system-ui, sans-serif;
+  --font-wordmark: "Work Sans", system-ui, sans-serif;
+  --font-heading: "Work Sans", system-ui, sans-serif;
+  --font-body: "Roboto", system-ui, sans-serif;
 
   /* ── Type Scale (1.25 ratio — Major Third) ── */
   --text-xs: 0.75rem;   /* 12px */
@@ -106,18 +71,18 @@
   --color-accent-900: #0D1920;
   --color-accent-950: #060D10;
 
-  /* Secondary Accent — Terracotta (#E2583E at 500) */
-  --color-accent-secondary-50: #FEF7F6;
-  --color-accent-secondary-100: #FDECE9;
-  --color-accent-secondary-200: #FAD8D3;
-  --color-accent-secondary-300: #F5B9AF;
-  --color-accent-secondary-400: #ED8976;
-  --color-accent-secondary-500: #E2583E;
-  --color-accent-secondary-600: #C94629;
-  --color-accent-secondary-700: #A53725;
-  --color-accent-secondary-800: #852E20;
-  --color-accent-secondary-900: #6B281C;
-  --color-accent-secondary-950: #3E1710;
+  /* Secondary Accent — Yellow/Gold (#F59E0B at 500) */
+  --color-accent-secondary-50: #FFFBEB;
+  --color-accent-secondary-100: #FEF3C7;
+  --color-accent-secondary-200: #FDE68A;
+  --color-accent-secondary-300: #FCD34D;
+  --color-accent-secondary-400: #FBBF24;
+  --color-accent-secondary-500: #F59E0B;
+  --color-accent-secondary-600: #D97706;
+  --color-accent-secondary-700: #B45309;
+  --color-accent-secondary-800: #924F09;
+  --color-accent-secondary-900: #78350F;
+  --color-accent-secondary-950: #451A03;
 
   /* Danger — Red */
   --color-danger-50: #FEF2F2;
@@ -360,7 +325,6 @@ html {
 body {
   margin: 0;
   font-family: var(--font-body);
-  font-feature-settings: "ss01" 1, "ss02" 1;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -380,7 +344,6 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  font-feature-settings: "ss01" 1, "ss02" 1;
   font-optical-sizing: auto;
   font-weight: 600;
   line-height: var(--leading-tight);
@@ -504,4 +467,15 @@ button {
   overflow: visible;
   clip: auto;
   white-space: normal;
+}
+
+/* ═══════════════════════════════════════════════════════
+   Accessibility: Focus Visible — WCAG 2.4.7
+   Visible focus indicator for keyboard navigation
+   ═══════════════════════════════════════════════════════ */
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-secondary-600);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--color-accent-secondary-200);
 }

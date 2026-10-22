@@ -3,12 +3,12 @@ import { Icon } from 'astro-iconset/components';
 
 // Theme colors
 const navLinks = [
+  { href: '#pricing', label: 'Pricing' },
   { href: '#about', label: 'About' },
-  { href: '#services', label: 'Services' },
-  { href: '#testimonials', label: 'Testimonials' },
+  { href: '#testimonials', label: 'Reviews' },
   { href: '#contact', label: 'Contact' },
 ];
-const phoneNumber = '(555) 123-4567';
+const phoneNumber = '(315) 212-6847';
 ---
 
 <nav
@@ -19,13 +19,13 @@ const phoneNumber = '(555) 123-4567';
     <div class="flex h-16 items-center justify-between">
       {/* Logo */}
       <a href="#" aria-label="Home" class="flex items-center gap-2">
-        <Icon name="material-symbols:construction" class="h-8 w-8 text-[var(--color-accent-secondary-500)]" />
-        <span class="font-wordmark font-bold tracking-tight text-white text-sm sm:text-base md:text-lg lg:text-xl overflow-hidden text-ellipsis whitespace-nowrap">CASUAL PAINTING AND CARPENTRY</span>
+        <span class="font-wordmark font-bold tracking-tight text-white text-sm sm:text-base md:text-lg lg:text-xl overflow-hidden text-ellipsis whitespace-nowrap">TF Stump Grinding</span>
       </a>
 
       {/* Phone number (center, hidden on small screens) */}
       <a
         href={`tel:${phoneNumber.replace(/[() -]/g, '')}`}
+        aria-label="Call TF Stump Grinding at ${phoneNumber}"
         class="hidden items-center gap-1.5 font-semibold text-white transition-colors hover:text-[var(--color-accent-secondary-400)] sm:flex"
       >
         <Icon name="material-symbols:call" class="h-4 w-4 text-[var(--color-accent-secondary-500)]" />
@@ -44,7 +44,7 @@ const phoneNumber = '(555) 123-4567';
         ))}
         <a
           href={`tel:${phoneNumber.replace(/[() -]/g, '')}`}
-          class="ml-2 inline-flex items-center gap-1.5 rounded-md bg-[var(--color-accent-secondary-500)] px-4 py-2 text-sm font-semibold text-[var(--color-neutral-50)] transition-colors hover:bg-[var(--color-accent-secondary-400)]"
+          class="ml-2 inline-flex items-center gap-1.5 rounded-md bg-[var(--color-accent-secondary-500)] px-4 py-2 text-sm font-semibold text-[var(--color-neutral-900)] transition-colors hover:bg-[var(--color-accent-secondary-400)]"
         >
           <Icon name="material-symbols:call" class="h-4 w-4" />
           Call Now
@@ -80,7 +80,8 @@ const phoneNumber = '(555) 123-4567';
         ))}
         <a
           href={`tel:${phoneNumber.replace(/[() -]/g, '')}`}
-          class="mt-2 inline-flex items-center justify-center gap-1.5 rounded-md bg-[var(--color-accent-secondary-500)] px-4 py-2 text-sm font-semibold text-[var(--color-neutral-50)] transition-colors hover:bg-[var(--color-accent-secondary-400)]"
+          aria-label="Call TF Stump Grinding at ${phoneNumber}"
+          class="mt-2 inline-flex items-center justify-center gap-1.5 rounded-md bg-[var(--color-accent-secondary-500)] px-4 py-2 text-sm font-semibold text-[var(--color-neutral-900)] transition-colors hover:bg-[var(--color-accent-secondary-400)]"
         >
           <Icon name="material-symbols:call" class="h-4 w-4" />
           Call {phoneNumber}
