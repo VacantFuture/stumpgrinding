@@ -155,7 +155,7 @@
   --color-success-600: #15803D;
   --color-success-700: #166534;
   --color-success-800: #14532D;
-  --color-success-900: #14532D;
+  --color-success-900: #052E16;
   --color-success-950: #052E16;
 
   /* Info — Blue */
@@ -214,6 +214,125 @@
   --color-success-bg: var(--color-success-50);
   --color-info: var(--color-info-500);
   --color-info-bg: var(--color-info-50);
+
+  /* Ring & Focus States */
+  --color-ring: var(--color-accent-300);
+  --color-ring-offset: var(--color-neutral-50);
+
+  /* Radius Scale */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Animation Tokens */
+  --animate-fade-in: fade-in 0.2s ease-out;
+  --animate-fade-out: fade-out 0.2s ease-in;
+  --animate-slide-in: slide-in 0.3s ease-out;
+  --animate-slide-out: slide-out 0.3s ease-in;
+
+  /* Shadcn-Compatible Semantic Tokens */
+  --color-background: var(--color-bg-primary);
+  --color-foreground: var(--color-text-primary);
+  --color-card: var(--color-bg-surface);
+  --color-card-foreground: var(--color-text-primary);
+  --color-muted: var(--color-neutral-200);
+  --color-muted-foreground: var(--color-neutral-600);
+  --color-accent-default: var(--color-neutral-200);
+  --color-accent-default-foreground: var(--color-neutral-900);
+  --color-destructive: var(--color-danger-500);
+  --color-destructive-foreground: var(--color-danger-50);
+  --color-border: var(--color-border-primary);
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(-0.5rem);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-0.5rem);
+      opacity: 0;
+    }
+  }
+}
+
+/* Dark mode variant */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Dark Mode Semantic Token Overrides */
+.dark {
+  --color-background: var(--color-neutral-900);
+  --color-foreground: var(--color-neutral-50);
+  --color-card: var(--color-neutral-900);
+  --color-card-foreground: var(--color-neutral-50);
+  --color-muted: var(--color-neutral-800);
+  --color-muted-foreground: var(--color-neutral-400);
+  --color-accent-default: var(--color-neutral-800);
+  --color-accent-default-foreground: var(--color-neutral-100);
+  --color-destructive: var(--color-danger-400);
+  --color-destructive-foreground: var(--color-danger-100);
+  --color-border: var(--color-neutral-700);
+  --color-text-primary: var(--color-neutral-50);
+  --color-text-secondary: var(--color-neutral-400);
+  --color-text-tertiary: var(--color-neutral-500);
+  --color-text-inverse: var(--color-neutral-900);
+  --color-bg-primary: var(--color-neutral-900);
+  --color-bg-secondary: var(--color-neutral-800);
+  --color-bg-tertiary: var(--color-neutral-700);
+  --color-bg-surface: var(--color-neutral-900);
+  --color-border-primary: var(--color-neutral-700);
+  --color-border-secondary: var(--color-neutral-800);
+  --color-border-accent: var(--color-accent-700);
+  --color-interactive-primary: var(--color-accent-400);
+  --color-interactive-primary-hover: var(--color-accent-300);
+  --color-interactive-primary-active: var(--color-accent-200);
+  --color-interactive-secondary: var(--color-accent-secondary-400);
+  --color-interactive-secondary-hover: var(--color-accent-secondary-300);
+  --color-interactive-secondary-active: var(--color-accent-secondary-200);
+  --color-ring: var(--color-accent-600);
+  --color-ring-offset: var(--color-neutral-900);
+}
+
+/* Base Layer Configuration */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════
