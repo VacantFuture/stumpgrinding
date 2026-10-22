@@ -58,83 +58,83 @@
   --color-neutral-900: #3D3530;
   --color-neutral-950: #282420;
 
-  /* Accent — Dark Navy (#2B4C5E at 500) */
-  --color-accent-50: #F5F7F9;
-  --color-accent-100: #E8EEF1;
-  --color-accent-200: #D0DCE3;
-  --color-accent-300: #A8BCC9;
-  --color-accent-400: #6B8BA3;
-  --color-accent-500: #2B4C5E;
-  --color-accent-600: #234050;
-  --color-accent-700: #1B3340;
-  --color-accent-800: #142630;
-  --color-accent-900: #0D1920;
-  --color-accent-950: #060D10;
+  /* Accent — Dark Navy */
+  --color-accent-50: oklch(97% 0.01 250);
+  --color-accent-100: oklch(93% 0.015 250);
+  --color-accent-200: oklch(87% 0.02 250);
+  --color-accent-300: oklch(75% 0.03 250);
+  --color-accent-400: oklch(55% 0.045 250);
+  --color-accent-500: oklch(35% 0.05 250);
+  --color-accent-600: oklch(30% 0.045 252);
+  --color-accent-700: oklch(24% 0.04 252);
+  --color-accent-800: oklch(18% 0.035 252);
+  --color-accent-900: oklch(12% 0.03 252);
+  --color-accent-950: oklch(8% 0.02 252);
 
-  /* Secondary Accent — Yellow/Gold (#F59E0B at 500) */
-  --color-accent-secondary-50: #FFFBEB;
-  --color-accent-secondary-100: #FEF3C7;
-  --color-accent-secondary-200: #FDE68A;
-  --color-accent-secondary-300: #FCD34D;
-  --color-accent-secondary-400: #FBBF24;
-  --color-accent-secondary-500: #F59E0B;
-  --color-accent-secondary-600: #D97706;
-  --color-accent-secondary-700: #B45309;
-  --color-accent-secondary-800: #924F09;
-  --color-accent-secondary-900: #78350F;
-  --color-accent-secondary-950: #451A03;
+  /* Secondary Accent — Terracotta */
+  --color-accent-secondary-50: oklch(98% 0.02 30);
+  --color-accent-secondary-100: oklch(95% 0.035 30);
+  --color-accent-secondary-200: oklch(90% 0.05 30);
+  --color-accent-secondary-300: oklch(82% 0.08 30);
+  --color-accent-secondary-400: oklch(68% 0.15 30);
+  --color-accent-secondary-500: oklch(58% 0.2 30);
+  --color-accent-secondary-600: oklch(50% 0.18 28);
+  --color-accent-secondary-700: oklch(42% 0.16 28);
+  --color-accent-secondary-800: oklch(34% 0.14 28);
+  --color-accent-secondary-900: oklch(26% 0.12 28);
+  --color-accent-secondary-950: oklch(18% 0.1 28);
 
   /* Danger — Red */
-  --color-danger-50: #FEF2F2;
-  --color-danger-100: #FEE2E2;
-  --color-danger-200: #FECACA;
-  --color-danger-300: #FCA5A5;
-  --color-danger-400: #F87171;
-  --color-danger-500: #DC2626;
-  --color-danger-600: #B91C1C;
-  --color-danger-700: #991B1B;
-  --color-danger-800: #7F1D1D;
-  --color-danger-900: #661616;
-  --color-danger-950: #450A0A;
+  --color-danger-50: oklch(97% 0.02 30);
+  --color-danger-100: oklch(94% 0.035 30);
+  --color-danger-200: oklch(90% 0.06 30);
+  --color-danger-300: oklch(82% 0.1 30);
+  --color-danger-400: oklch(72% 0.16 30);
+  --color-danger-500: oklch(53% 0.22 27);
+  --color-danger-600: oklch(48% 0.2 27);
+  --color-danger-700: oklch(42% 0.18 27);
+  --color-danger-800: oklch(36% 0.16 27);
+  --color-danger-900: oklch(30% 0.14 27);
+  --color-danger-950: oklch(22% 0.12 27);
 
   /* Warning — Amber */
-  --color-warning-50: #FFFBEB;
-  --color-warning-100: #FEF3C7;
-  --color-warning-200: #FDE68A;
-  --color-warning-300: #FCD34D;
-  --color-warning-400: #FBBF24;
-  --color-warning-500: #F59E0B;
-  --color-warning-600: #D97706;
-  --color-warning-700: #B45309;
-  --color-warning-800: #924F09;
-  --color-warning-900: #78350F;
-  --color-warning-950: #451A03;
+  --color-warning-50: oklch(98% 0.02 85);
+  --color-warning-100: oklch(96% 0.04 85);
+  --color-warning-200: oklch(92% 0.07 85);
+  --color-warning-300: oklch(86% 0.12 85);
+  --color-warning-400: oklch(78% 0.16 85);
+  --color-warning-500: oklch(68% 0.18 75);
+  --color-warning-600: oklch(60% 0.16 70);
+  --color-warning-700: oklch(50% 0.14 65);
+  --color-warning-800: oklch(42% 0.12 60);
+  --color-warning-900: oklch(36% 0.1 55);
+  --color-warning-950: oklch(28% 0.08 50);
 
   /* Success — Green */
-  --color-success-50: #F0FDF4;
-  --color-success-100: #DCFCE7;
-  --color-success-200: #BBF7D0;
-  --color-success-300: #86EFAC;
-  --color-success-400: #4ADE80;
-  --color-success-500: #16A34A;
-  --color-success-600: #15803D;
-  --color-success-700: #166534;
-  --color-success-800: #14532D;
-  --color-success-900: #052E16;
-  --color-success-950: #052E16;
+  --color-success-50: oklch(97% 0.02 150);
+  --color-success-100: oklch(94% 0.04 150);
+  --color-success-200: oklch(90% 0.07 150);
+  --color-success-300: oklch(82% 0.12 150);
+  --color-success-400: oklch(74% 0.16 150);
+  --color-success-500: oklch(58% 0.18 150);
+  --color-success-600: oklch(50% 0.16 148);
+  --color-success-700: oklch(42% 0.14 148);
+  --color-success-800: oklch(34% 0.12 148);
+  --color-success-900: oklch(28% 0.1 148);
+  --color-success-950: oklch(20% 0.08 148);
 
   /* Info — Blue */
-  --color-info-50: #EFF6FF;
-  --color-info-100: #DBEAFE;
-  --color-info-200: #BFDBFE;
-  --color-info-300: #93C5FD;
-  --color-info-400: #60A5FA;
-  --color-info-500: #2563EB;
-  --color-info-600: #1D4ED8;
-  --color-info-700: #1E40AF;
-  --color-info-800: #1E3A8A;
-  --color-info-900: #1E3A8A;
-  --color-info-950: #172554;
+  --color-info-50: oklch(96% 0.02 260);
+  --color-info-100: oklch(93% 0.035 260);
+  --color-info-200: oklch(88% 0.05 260);
+  --color-info-300: oklch(80% 0.08 260);
+  --color-info-400: oklch(70% 0.12 260);
+  --color-info-500: oklch(55% 0.18 260);
+  --color-info-600: oklch(50% 0.16 258);
+  --color-info-700: oklch(44% 0.14 258);
+  --color-info-800: oklch(38% 0.12 258);
+  --color-info-900: oklch(32% 0.1 258);
+  --color-info-950: oklch(24% 0.08 258);
 
   /* ═══════════════════════════════════════════════════════
      Semantic Tokens
@@ -191,6 +191,21 @@
   --radius-xl: 0.75rem;
   --radius-2xl: 1rem;
   --radius-full: 9999px;
+
+  /* Container Query Tokens */
+  --container-3xs: 16rem;
+  --container-2xs: 18rem;
+  --container-xs: 20rem;
+  --container-sm: 24rem;
+  --container-md: 28rem;
+  --container-lg: 32rem;
+  --container-xl: 36rem;
+  --container-2xl: 42rem;
+  --container-3xl: 48rem;
+  --container-4xl: 56rem;
+  --container-5xl: 64rem;
+  --container-6xl: 72rem;
+  --container-7xl: 80rem;
 
   /* Animation Tokens */
   --animate-fade-in: fade-in 0.2s ease-out;
@@ -298,6 +313,40 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* ═══════════════════════════════════════════════════════
+   Custom Utilities
+   ═══════════════════════════════════════════════════════ */
+
+/* Text gradient utility */
+@utility text-gradient {
+  @apply bg-gradient-to-r from-accent-500 to-accent-secondary-500 bg-clip-text text-transparent;
+}
+
+/* Decorative line utility (top border) */
+@utility line-t {
+  @apply relative before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw] before:bg-neutral-950/5 dark:before:bg-white/10;
+}
+
+/* Decorative line utility (bottom border) */
+@utility line-b {
+  @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw] after:bg-neutral-950/5 dark:after:bg-white/10;
+}
+
+/* Focus ring utility */
+@utility focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+}
+
+/* Disabled state utility */
+@utility disabled-state {
+  @apply disabled:pointer-events-none disabled:opacity-50;
+}
+
+/* Smooth scroll behavior — also applied globally via @layer base */
+@utility scroll-smooth {
+  scroll-behavior: smooth;
 }
 
 /* ═══════════════════════════════════════════════════════
